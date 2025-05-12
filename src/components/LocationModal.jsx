@@ -15,7 +15,7 @@ const LocationModal = ({
 }) => {
   return (
     <div
-      className={`absolute bg-white h-full w-full top-0 left-0 px-8 pt-7 pb-5 rounded-b-3xl ${
+      className={`absolute bg-white h-screen w-full top-0 left-0 px-8 pt-7 pb-5 ${
         showSearch ? "block" : "hidden"
       }`}
     >
@@ -30,6 +30,7 @@ const LocationModal = ({
         setSearchValue={setSearchValue}
         displayClickedCountry={displayClickedCountry}
       />
+      <div></div>
     </div>
   );
 };
