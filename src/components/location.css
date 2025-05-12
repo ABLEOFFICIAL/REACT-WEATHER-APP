@@ -1,0 +1,15 @@
+@layer components {
+  .location-modal {
+    display: hidden;
+    animation: slideDown 0.5 ease-in-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

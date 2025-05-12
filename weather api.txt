@@ -1,0 +1,6 @@
+apiKey: d8718dad84e281aa484f88a07d41f81f
+
+apiURL: https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+&units=metric
+
