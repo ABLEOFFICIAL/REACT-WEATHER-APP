@@ -3,6 +3,7 @@ import MyHeader from "./components/MyHeader";
 import WeatherCondition from "./components/WeatherCondition";
 import MyInfo from "./components/MyInfo";
 import LocationModal from "./components/LocationModal";
+import WeatherInfo from "./components/moreInfo/WeatherInfo";
 
 const App = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -12,8 +13,10 @@ const App = () => {
   // const [countryName, setCountryName] = useState();
 
   const apiKey = "d8718dad84e281aa484f88a07d41f81f";
-  const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric";
+  // const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric";
   const countryAPI = "https://restcountries.com/v3.1/all";
+  const apiURL =
+    "https://api.openweathermap.org/data/2.5/forecast?units=metric";
 
   useEffect(() => {
     async function displayCountry() {
@@ -98,6 +101,7 @@ const App = () => {
             setSearchValue={setSearchValue}
             displayClickedCountry={displayClickedCountry}
           />
+          <WeatherInfo />
         </div>
       )}
     </>

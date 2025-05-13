@@ -21,16 +21,16 @@ const MyInfo = ({ countryData }) => {
   ];
   return (
     <div className="border-white border-2 rounded-2xl bg-[#bfbfbf]50 mx-4">
-      <div className="w-full h-full bg-white/30 flex flex-col justify-between items-center py-4">
+      <div className="w-full h-full bg-white/30 flex flex-col justify-between items-center py-4 rounded-2xl">
         <div className="text-center">
           <h6 className="text-xl [text-shadow:3px_3px_3px_grey]">
             Today, {date.getDate()} {months[date.getMonth()]}
           </h6>
           <h1 className="text-7xl [text-shadow:7px_7px_30px_black] font-bold my-4">
-            {Math.round(countryData.main.temp)}°
+            {Math.round(countryData.list[0].main.temp)}°
           </h1>
           <h3 className="text-2xl [text-shadow:3px_3px_3px_grey] font-bold">
-            {countryData.weather[0].main}
+            {countryData.list[0].weather[0].main}
           </h3>
         </div>
         <div className="w-[70%] pt-5 pb-2">
@@ -42,7 +42,7 @@ const MyInfo = ({ countryData }) => {
             <div>
               <span className="left-0.5">|</span>
               <span className="pl-4">
-                {Math.round(countryData.wind.speed)} km/h
+                {Math.round(countryData.list[0].wind.speed)} km/h
               </span>
             </div>
           </div>
@@ -53,7 +53,9 @@ const MyInfo = ({ countryData }) => {
             </div>
             <div>
               <span className="left-0.5">|</span>
-              <span className="pl-4">{countryData.main.humidity} %</span>
+              <span className="pl-4">
+                {countryData.list[0].main.humidity} %
+              </span>
             </div>
           </div>
         </div>

@@ -1,0 +1,49 @@
+https://api.openweathermap.org/data/2.5/forecast?units=metric&q=nigeria&appid=YOUR_API_KEY
+
+
+{
+  "cod": "200",
+  "message": 0,
+  "cnt": 40,
+  "list": [
+    {
+      "dt": 1747072800,
+      "main": {
+        "temp": 28.45,
+        "feels_like": 29.32,
+        "temp_min": 28.45,
+        "temp_max": 29.21,
+        "pressure": 1011,
+        "humidity": 70
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02d"
+        }
+      ],
+      "clouds": { "all": 20 },
+      "wind": {
+        "speed": 4.6,
+        "deg": 220
+      },
+      "visibility": 10000,
+      "dt_txt": "2025-05-13 12:00:00"
+    },
+    ...
+  ],
+  "city": {
+    "id": 2332453,
+    "name": "Lagos",
+    "coord": {
+      "lat": 6.4531,
+      "lon": 3.3958
+    },
+    "country": "NG",
+    "timezone": 3600,
+    "sunrise": 1747014223,
+    "sunset": 1747058203
+  }
+}

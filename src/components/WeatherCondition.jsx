@@ -13,9 +13,10 @@ const WeatherCondition = ({ countryData }) => {
   const [weatherImg, setWeatherImg] = useState();
 
   useEffect(() => {
-    if (!countryData || !countryData.weather) return;
+    if (!countryData || !countryData.list || !countryData.list[0]?.weather)
+      return;
 
-    const weatherMain = countryData.weather[0].main;
+    const weatherMain = countryData.list[0].weather[0].main;
 
     switch (weatherMain) {
       case "Clear":

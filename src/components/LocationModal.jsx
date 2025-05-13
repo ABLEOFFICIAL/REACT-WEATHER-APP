@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import RecentSearch from "./RecentSearch";
-import "./location.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 const LocationModal = ({
   showSearch,
@@ -14,24 +14,31 @@ const LocationModal = ({
   displayClickedCountry,
 }) => {
   return (
-    <div
-      className={`absolute bg-white h-screen w-full top-0 left-0 px-8 pt-7 pb-5 ${
-        showSearch ? "block" : "hidden"
-      }`}
-    >
-      <SearchBar
-        onChange={onChange}
-        searchValue={searchValue}
-        onClick={onClick}
-      />
-      <RecentSearch
-        searchCountry={searchCountry}
-        setShowSearch={setShowSearch}
-        setSearchValue={setSearchValue}
-        displayClickedCountry={displayClickedCountry}
-      />
-      <div></div>
-    </div>
+    <AnimatePresence>
+      {showSearch && (
+        <motion.div
+          initial={{ y: -100 }}
+          animate={{ y: 0 }}
+          exit={{ y: -100 }}
+          transition={{ type: "tween", duration: 0.6 }}
+          className={`absolute bg-white h-screen w-full top-0 left-0 px-8 pt-7 pb-5 location-modal"
+        }`}
+        >
+          <SearchBar
+            onChange={onChange}
+            searchValue={searchValue}
+            onClick={onClick}
+          />
+          <RecentSearch
+            searchCountry={searchCountry}
+            setShowSearch={setShowSearch}
+            setSearchValue={setSearchValue}
+            displayClickedCountry={displayClickedCountry}
+          />
+          <div></div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

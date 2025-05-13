@@ -6,7 +6,7 @@ const MyLocation = ({ onClick, countryData }) => {
   return (
     <div className="w-[50%] flex items-center justify-between">
       <Location />
-      <h3 className="font-bold text-md text-center">{countryData.name}</h3>
+      <h3 className="font-bold text-md text-center">{countryData.city.name}</h3>
       <RiArrowDropDownLine onClick={onClick} size={40} />
     </div>
   );
