@@ -1,5 +1,6 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
+import TimeStatus from "./TimeStatus";
 
 const Sunset = () => {
   return (
@@ -9,7 +10,9 @@ const Sunset = () => {
         <p className="text-2xl font-bold">
           18:35<span>pm</span>
         </p>
-        <ProgressBar percentage={50} color="text-purple-400" />
+        {/* <ProgressBar percentage={50} color="text-purple-400" /> */}
+        <TimeStatus timeLabel="Sunset" time="2025-05-14T18:55:00" />
+
         {/* <p>{countryData.main.pressure}</p> */}
       </div>
     </div>

@@ -19,7 +19,6 @@ const LocationModal = ({
         <motion.div
           initial={{ y: -100 }}
           animate={{ y: 0 }}
-          exit={{ y: -100 }}
           transition={{ type: "tween", duration: 0.6 }}
           className={`absolute bg-white h-screen w-full top-0 left-0 px-8 pt-7 pb-5 location-modal"
         }`}

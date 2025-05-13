@@ -1,5 +1,6 @@
 import React from "react";
-import ProgressBar from "./ProgressBar";
+// import ProgressBar from "./ProgressBar";
+import DirectionStatus from "./DirectionStatus";
 
 const Direction = () => {
   return (
@@ -7,7 +8,8 @@ const Direction = () => {
       <div className="w-full h-full bg-white/30 flex flex-col justify-start items-center py-4  rounded-2xl">
         <span className="text-neutral-200">Direction</span>
         <p className="text-2xl font-bold">North</p>
-        <ProgressBar percentage={88} color="text-cyan-400" />
+        {/* <ProgressBar percentage={88} color="text-cyan-400" /> */}
+        <DirectionStatus direction={45} />
         {/* <p>{countryData.main.pressure}</p> */}
       </div>
     </div>
