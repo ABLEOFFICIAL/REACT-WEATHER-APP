@@ -101,7 +101,7 @@ const App = () => {
             setSearchValue={setSearchValue}
             displayClickedCountry={displayClickedCountry}
           />
-          <WeatherInfo />
+          <WeatherInfo countryData={countryData} />
         </div>
       )}
     </>
